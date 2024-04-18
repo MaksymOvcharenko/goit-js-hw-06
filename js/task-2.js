@@ -7,7 +7,7 @@ class Storage {
     return this.#items;
   }
   addItem(item) {
-    this.#items.push(item);
+    return this.#items.push(item);
   }
   removeItem(item) {
     if (this.#items.includes(item)) {
