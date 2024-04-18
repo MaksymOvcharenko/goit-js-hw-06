@@ -25,3 +25,6 @@ builder.padEnd("^");
 console.log(builder.getValue()); // "^.^"
 builder.padBoth("=");
 console.log(builder.getValue()); // "=^.^="
+// (this.items = this.items
+// .slice(0, this.items.indexOf(item))
+// .concat(this.items.slice(this.items.indexOf(item) + 1)));

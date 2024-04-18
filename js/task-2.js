@@ -11,7 +11,9 @@ class Storage {
   }
   removeItem(item) {
     if (this.#items.includes(item)) {
-      return this.#items.splice(this.#items.indexOf(item), 1);
+      return (this.#items = this.#items
+        .slice(0, this.#items.indexOf(item))
+        .concat(this.#items.slice(this.#items.indexOf(item) + 1)));
     }
   }
 }
@@ -28,3 +30,4 @@ console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 storage.removeItem("Scaner");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+// return this.#items.splice(this.#items.indexOf(item), 1);
